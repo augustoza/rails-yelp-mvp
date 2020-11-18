@@ -1,0 +1,8 @@
+<div class="rest-new">
+  <%= simple_form_for(@restaurant) do |f| %>
+  <%= f.input :name, label: "Please insert restaurant name", placeholder: "Bobby food" %>
+  <%= f.input :address %>
+  <%= f.input :category, collection: CATEGORY %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+</div>

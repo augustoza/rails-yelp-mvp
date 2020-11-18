@@ -1,0 +1,13 @@
+<h1><%= @restaurant.name %></h1>
+<h2>Category: <%= @restaurant.category %></h2>
+<h3>Address: <%= @restaurant.address %> </h3>
+
+<h4>REVIEWS</h4>
+<% @restaurant.reviews.each do |review| %>
+<h5><%= "RATING: #{review.rating} - DESCRIPTION: #{review.content}" %></h5>
+<% end %>
+
+<h3>Average rating: <%= @avg %></h3>
+
+<%= link_to "Add a review to this restaurant", new_restaurant_review_path(@restaurant) %>
+<%= link_to "Go to restaurants list", restaurants_path %>
